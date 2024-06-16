@@ -1,0 +1,26 @@
+from pyrogram import Client
+from Plugin.databesas import *
+from Plugin.api import *
+import os 
+
+SUDO = 1321338802 # admin or sudo id
+CHANNLS_BOT = ['radfx2'] # bot channls 
+API_KEY = '<BOT_TOKEN>'  # API_KEY OR BOT_TOKN 
+
+
+if not os.path.exists('./.session'):
+    os.mkdir('./.session')
+
+if not os.path.exists('./.databesas'):
+    os.mkdir('./.databesas')
+
+app = Client(
+    '.session/rad',
+    bot_token=API_KEY, # API_KEY 
+    api_hash='db16cbf9526f370b12332151934d8g3fd', # UserBot api_hahs
+    api_id='1234567' # UserBot api_id 
+)
+
+datas, apiV = databesas(), TempMailApi()
+
+
